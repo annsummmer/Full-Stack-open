@@ -16,5 +16,4 @@ part2
   countries
 </pre>
 
-Put the whole react repository of the project to each folder except the folder <i>node_modules</i># Full-Stack-open
-# Full-Stack-open
+Put the whole react repository of the project to each folder except the folder <i>node_modules</i>
