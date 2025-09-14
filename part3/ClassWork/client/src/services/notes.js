@@ -1,5 +1,7 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/api/notes'
+const baseUrl = window.location.includes('full-stack-open')
+  ? '/api/notes'
+  : 'http://localhost:3001/api/notes'
 
 const getAll = () => {
   const request = axios.get(baseUrl)
