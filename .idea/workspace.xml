@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87384ee1-314a-461e-962d-f7e3c403eec7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Full-Stack-open.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/.idea/part3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/ClassWork/server/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/ClassWork/server/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part3/ClassWork/server/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part2/phonebook/src/services/personsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/part2/phonebook/src/services/personsService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part3/Phonebook/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/part3/Phonebook/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part3/Phonebook/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/part3/Phonebook/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part3/Phonebook/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/part3/Phonebook/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +38,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "advanced.settings",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "two.files.diff.last.used.file": "/Users/anna/WebstormProjects/Full-Stack-open/part3/package.json",
@@ -70,6 +57,34 @@
       <recent name="$PROJECT_DIR$/part1" />
       <recent name="$PROJECT_DIR$/part2" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/part3/ClassWork/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/part3/ClassWork/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -89,7 +104,7 @@
       <workItem from="1757166705990" duration="17900000" />
       <workItem from="1757404324319" duration="58176000" />
       <workItem from="1757839320533" duration="91000" />
-      <workItem from="1757847198244" duration="2212000" />
+      <workItem from="1757847198244" duration="3444000" />
     </task>
     <servers />
   </component>
