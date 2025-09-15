@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = window.location.includes('full-stack-open')
+const baseUrl = window.location.origin.includes('full-stack-open')
   ? '/api/notes'
   : 'http://localhost:3001/api/notes'
 
