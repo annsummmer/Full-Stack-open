@@ -7,25 +7,30 @@ if (process.argv.length < 3) {
 
 const password = process.argv[2];
 
-const url = `mongodb+srv://annsummmer_db_user:${password}@cluster0.silxhwj.mongodb.net/personsApp?retryWrites=true&w=majority&appName=Cluster0`;
-
 mongoose.set('strictQuery',false);
 
 mongoose.connect(url);
 
-const personSchema = new mongoose.Schema({
+const noteSchema = new mongoose.Schema({
   name: String,
   number: String,
-})
+});
 
-const Person = mongoose.model('Person', personSchema);
+const Person = mongoose.model('Person', noteSchema);
 
 const person = new Person({
-  name: 'Anna',
+  name: 'Miia',
   number: '+380632671662',
 })
 
-person.save().then(result => {
-  console.log('person saved!', result)
-  mongoose.connection.close();
+// person.save().then(result => {
+//   console.log('person saved!', result)
+//   mongoose.connection.close();
+// })
+
+Person.find({name: 'Miia'}).then(result => {
+  result.forEach(person => {
+    console.log(person)
+  })
+  mongoose.connection.close()
 })

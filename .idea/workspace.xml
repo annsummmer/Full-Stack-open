@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87384ee1-314a-461e-962d-f7e3c403eec7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part3/Phonebook/models/person.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part2/phonebook/src/components/Persons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/part2/phonebook/src/components/Persons.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part3/Phonebook/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/part3/Phonebook/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part3/Phonebook/mongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/part3/Phonebook/mongo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part3/Phonebook/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/part3/Phonebook/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part3/Phonebook/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/part3/Phonebook/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +37,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/anna/WebstormProjects/Full-Stack-open",
+    "last_opened_file_path": "/Users/anna/WebstormProjects/Full-Stack-open/part3/Phonebook",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.dev (1).executor": "Run",
     "npm.dev.executor": "Run",
+    "npm.start (1).executor": "Run",
     "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "advanced.settings",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
@@ -48,6 +55,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/part3/Phonebook" />
       <recent name="$PROJECT_DIR$/part2/courseInfo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -58,12 +66,32 @@
       <recent name="$PROJECT_DIR$/part2" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/part2/phonebook/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/part3/ClassWork/client/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/part3/Phonebook/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -81,8 +109,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.dev (1)" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -104,7 +134,7 @@
       <workItem from="1757166705990" duration="17900000" />
       <workItem from="1757404324319" duration="58176000" />
       <workItem from="1757839320533" duration="91000" />
-      <workItem from="1757847198244" duration="3444000" />
+      <workItem from="1757847198244" duration="28677000" />
     </task>
     <servers />
   </component>
