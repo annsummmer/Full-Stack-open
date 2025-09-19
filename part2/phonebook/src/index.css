@@ -67,9 +67,17 @@
 /*  }*/
 /*}*/
 
-.error {
+.success {
     color: green;
     background: lightgrey;
+}
+
+.error {
+    color: red;
+    background: pink;
+}
+
+.message {
     font-size: 20px;
     border-style: solid;
     border-radius: 5px;

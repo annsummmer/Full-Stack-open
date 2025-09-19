@@ -1,5 +1,5 @@
 const Persons = ({persons, filterVal, onDeletePerson}) => {
-  console.log(persons)
+
   return (<ul>
     { persons.filter(person => person.name.toLowerCase().includes(filterVal.toLowerCase())).map(
       (person) => {

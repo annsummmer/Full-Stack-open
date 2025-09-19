@@ -10,38 +10,40 @@ const App = () => {
   const [newName, setNewName] = useState('');
   const [newNumber, setNewNumber] = useState('');
   const [filter, setFilter] = useState('');
-  const [successMessage, setSuccessMessage] = useState(null);
+  const [notificationMessage, setNotificationMessage] = useState({text: '', status: ''});
 
   useEffect(() => {
     personsService.getAll()
-      .then(response => setPersons(response))
+      .then(response => setPersons(response));
   }, []);
 
   const addPerson = (e) => {
     e.preventDefault();
     const existing = persons.find(persons => persons.name === newName);
-
     if (existing) {
       if (confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)) {
+        console.log({...existing, number: newNumber});
         personsService.update({...existing, number: newNumber})
           .then((updatedPerson) => {
+            console.log(updatedPerson)
             setPersons(persons.map(p => p.id === existing.id ? updatedPerson : p));
-            showSuccessMessage(`${updatedPerson.name} - ${updatedPerson.number} was updated in the phonebook`);
+            showMessage(`${updatedPerson.name} - ${updatedPerson.number} was updated in the phonebook`, 'success');
+            clearInputs();
           });
       }
     } else {
       personsService.create({name: newName, number: newNumber})
         .then(addedPerson => {
           setPersons([...persons, addedPerson]);
-
-          showSuccessMessage(`${addedPerson.name} - ${addedPerson.number} was added to the phonebook`);
-        });
+          showMessage(`${addedPerson.name} - ${addedPerson.number} was added to the phonebook`, 'success');
+          clearInputs();
+        }).catch(error => {
+          showMessage(`${error.response.data}`, 'error');
+      });
     }
-    setNewName('');
-    setNewNumber('');
   }
 
-  const handleDeletePerson = (person) => {
+  const deletePerson = (person) => {
     if (confirm(`delete ${person.name}?`)) {
       personsService.deletePerson(person.id)
         .then(deletedPerson => {
@@ -51,11 +53,20 @@ const App = () => {
     }
   }
 
-  const showSuccessMessage = (msg) => {
-    setSuccessMessage(msg);
+  const clearInputs = () => {
+    setNewName('');
+    setNewNumber('');
+  }
+
+  const showMessage = (msg, status) => {
+    if (status === 'success') {
+      setNotificationMessage({text: msg, status: 'success'});
+    } else if (status === 'error') {
+      setNotificationMessage({text: msg, status: 'error'});
+    }
 
     setTimeout(() => {
-        setSuccessMessage(null);
+      setNotificationMessage({text: '', status: ''});
     }, 3000);
   }
 
@@ -79,7 +90,7 @@ const App = () => {
         filterVal={filter}
       />
       <h2>Add a new</h2>
-      <Notification message={successMessage} />
+      <Notification message={notificationMessage}/>
       <PersonForm
         addPerson={addPerson}
         newName={newName}
@@ -91,7 +102,7 @@ const App = () => {
       <Persons
         persons={persons}
         filterVal={filter}
-        onDeletePerson={handleDeletePerson}
+        onDeletePerson={deletePerson}
       />
     </div>
   );
