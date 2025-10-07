@@ -37,13 +37,14 @@ blogRouter.post('/', middleware.userExtractor, async (request, response) => {
   const blog = new Blog({...request.body, user: request.body.userId})
 
   const user = request.user;
-
-  const savedBlog = await blog.save()
-
-  user.blogs = user.blogs.concat(savedBlog._id)
-  await user.save()
-
-  response.status(201).json(savedBlog)
+  try {
+    const savedBlog = await blog.save()
+    user.blogs = user.blogs.concat(savedBlog._id)
+    await user.save()
+    response.status(201).json(savedBlog)
+  } catch (error) {
+    response.status(400).json(error)
+  }
 })
 
 blogRouter.put('/:id', middleware.userExtractor, async (request, response, next) => {

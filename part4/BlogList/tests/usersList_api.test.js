@@ -1,5 +1,5 @@
 const assert = require('node:assert')
-const { test, after, beforeEach, describe } = require('node:test')
+const { test, beforeEach, describe } = require('node:test')
 const bcrypt = require('bcrypt')
 const supertest = require('supertest')
 const app = require('../app')
@@ -93,6 +93,4 @@ describe('When there is initially one user in db', () => {
 
     assert(result.body.error.includes('User validation failed: username: Path `username` is required.'))
   })
-
-  // How to test password? no password, password < 3
 });
