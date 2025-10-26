@@ -7,3 +7,5 @@
 part4/BlogList/node_modules
 Part5/bloglist-frontend/node_modules
 Part5/playwright/node_modules
+Part5/playwright/playwright-report/
+Part5/playwright/test-results/
