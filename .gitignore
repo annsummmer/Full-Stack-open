@@ -1,5 +1,6 @@
 .DS_Store
 .idea/
+.env
 
 /part3/Phonebook/node_modules/
 /part3/Phonebook/.env
